@@ -6,16 +6,9 @@
 tuple1 = ('Russia', 'USA', 'UK', 'France', 'Italy')
 print(tuple1)
 country = input('Enter one of the countries that have been shown ')
-if country == 'Russia':
-    print(0)
-elif country == 'USA':
-    print(1)
-elif country == 'UK':
-    print(2)
-elif country == 'France':
-    print(3)
-elif country == 'Italy':
-    print(4)
+if country in tuple1:
+    index = tuple1.index(country)
+    print(f'The index of {country} is {index}')
 else:
     print("The country wasn't shown")
 
@@ -25,16 +18,8 @@ else:
 tuple1 = ('Russia', 'USA', 'UK', 'France', 'Italy')
 print(tuple1)
 num = int(input('Enter a number < 5 '))
-if num == 0 or num == -5:
-    print('Russia')
-elif num == 1 or num == -4:
-    print('USA')
-elif num == 2 or num == -3:
-    print('UK')
-elif num == 3 or num == -2:
-    print('France')
-elif num == 4 or num == -1:
-    print('Italy')
+if -6 < num < 5:
+    print(tuple1[num])
 else:
     print("The index number doesn't exist")
 
@@ -134,16 +119,9 @@ tuple1 = ('Russia', 'USA', 'UK', 'France', 'Italy')
 print(tuple1)
 country1 = input('Enter one of the countries that have been shown ')
 def country_index(country):
-    if country == 'Russia':
-        print(0)
-    elif country == 'USA':
-        print(1)
-    elif country == 'UK':
-        print(2)
-    elif country == 'France':
-        print(3)
-    elif country == 'Italy':
-        print(4)
+    if country in tuple1:
+        index = tuple1.index(country)
+        print(f'The index of {country} is {index}')
     else:
         print("The country wasn't shown")
 country_index(country1)
@@ -155,16 +133,8 @@ tuple1 = ('Russia', 'USA', 'UK', 'France', 'Italy')
 print(tuple1)
 num1 = int(input('Enter a number < 5 '))
 def country_num(num):
-    if num == 0 or num == -5:
-        print('Russia')
-    elif num == 1 or num == -4:
-        print('USA')
-    elif num == 2 or num == -3:
-        print('UK')
-    elif num == 3 or num == -2:
-        print('France')
-    elif num == 4 or num == -1:
-        print('Italy')
+    if -6 < num < 5:
+        print(tuple1[num])
     else:
         print("The index number doesn't exist")
 country_num(num1)
